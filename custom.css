@@ -1,0 +1,114 @@
+/* === FONT & GLOBAL VARIABLES === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --warna-mahogany: #A63A3A; 
+    --warna-mahogany-dark: #8F3030; 
+    --warna-cream-light: #F7E9E3; 
+    --warna-cream-hover: #E3D2CB; 
+    --warna-cream-bg: #FCF5F3; 
+    --warna-putih: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--warna-cream-bg); 
+    color: #333;
+}
+
+/* === UTILITY CLASSES === */
+.btn-maroon { 
+    background-color: var(--warna-mahogany) !important; 
+    border-color: var(--warna-mahogany) !important; 
+    color: var(--warna-putih); 
+}
+.btn-maroon:hover {
+    background-color: var(--warna-mahogany-dark) !important;
+    border-color: var(--warna-mahogany-dark) !important;
+    color: var(--warna-putih);
+}
+.text-maroon {
+    color: var(--warna-mahogany);
+}
+.bg-maroon {
+    background-color: var(--warna-mahogany) !important;
+    color: var(--warna-putih);
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--warna-mahogany);
+    font-weight: 700;
+}
+
+/* === DASHBOARD CARDS (Untuk Dashboard Admin) === */
+.dash-card-mahogany {
+    background: var(--warna-mahogany) !important;
+    color: var(--warna-putih);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(166, 58, 58, 0.15);
+    transition: transform 0.3s;
+}
+
+.dash-card-mahogany:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(166, 58, 58, 0.25);
+    background: var(--warna-mahogany-dark) !important;
+}
+
+/* === USER AREA STYLING (DONATUR/PENERIMA) === */
+.wrapper { 
+    display: flex; 
+    width: 100%; 
+    min-height: 100vh; 
+    overflow-x: hidden; 
+}
+.sidebar {
+    min-width: 260px; max-width: 260px;
+    background-color: var(--warna-cream-light); 
+    color: var(--warna-mahogany);
+    border-right: 1px solid #D9C3B9;
+    display: flex; flex-direction: column;
+}
+.main-content { 
+    flex-grow: 1; 
+    padding: 40px; 
+    background-color: #ffffff; 
+}
+
+/* Sidebar Menu */
+.sidebar .nav-link {
+    color: var(--warna-mahogany); font-weight: 600;
+    padding: 12px 20px; margin: 8px 15px; border-radius: 8px;
+    display: flex; align-items: center; gap: 10px;
+    transition: 0.3s;
+}
+.sidebar .nav-link:hover { background-color: var(--warna-cream-hover); }
+.sidebar .nav-link.active {
+    background-color: var(--warna-mahogany) !important;
+    color: white !important; box-shadow: 0 4px 10px rgba(166, 58, 58, 0.3);
+}
+.logout-container { margin-top: auto; padding: 20px; border-top: 1px solid rgba(166, 58, 58, 0.1); }
+.btn-logout { width: 100%; border: 2px solid var(--warna-mahogany); color: var(--warna-mahogany); background: transparent; font-weight: 700; }
+.btn-logout:hover { background: var(--warna-mahogany); color: white; }
+
+/* Card Buku (Katalog Penerima) */
+.book-card { 
+    border: none; 
+    border-radius: 15px; 
+    transition: 0.3s; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    overflow: hidden; 
+    height: 100%; 
+    background: white; 
+    border: 1px solid #eee; 
+}
+.book-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(166, 58, 58, 0.15); 
+    border-color: var(--warna-cream-hover); 
+}
+.book-img-container { height: 220px; overflow: hidden; position: relative; background: #f9f9f9; }
+.book-img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+.book-body { padding: 20px; display: flex; flex-direction: column; height: calc(100% - 220px); }
+.book-title { font-weight: 700; font-size: 16px; color: #333; margin-bottom: 5px; }
+.book-author { color: #666; font-size: 13px; margin-bottom: 15px; }
+.book-meta { margin-top: auto; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
